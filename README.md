@@ -1,8 +1,10 @@
 Some notes and config files for setting up a linux desktop environment in my preferred way. Eventually it might be better to use  configuration management software such as Ansible instead.
 
-It gives more control if one uses the commands line with the likes of `debootstrap`, `pacstrap` or `rpm`, rather than a installer. General references: 
-https://wiki.archlinux.org/index.php/Installation_guide
-https://www.debian.org/releases/stable/amd64/apds03.en.html
+It gives more control if one uses the commands line with the likes of `debootstrap`, `pacstrap` or `rpm`, rather than a installer. 
+
+General references: 
+* https://wiki.archlinux.org/index.php/Installation_guide
+* https://www.debian.org/releases/stable/amd64/apds03.en.html
 
 # Before the First Reboot
 
