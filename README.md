@@ -10,7 +10,7 @@ The following are done after basic manual installation or installer. Properly mo
 
 * Set up filesystems mainly by editing `/etf/fstab`.
     - Create the swap file if no swap partition is used.
-    - Mount `/tmp` in the memory (`tmpfs /tmp tmpfs rw,nosuid,nodev 0 0`) if necessary.
+    - Mount `/tmp` in the memory (fstab line: `tmpfs /tmp tmpfs rw,nosuid,nodev 0 0`) if necessary.
     - Bind-mount separate `/home`, `/var`, etc. if necessary. 
 
 * Edit `/etc/locale.gen` as necessary. Set up locales with `locale-gen` command. 
