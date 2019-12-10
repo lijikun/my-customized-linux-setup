@@ -1,0 +1,58 @@
+set history=10000
+set undolevels=10000
+set visualbell
+set noerrorbells
+set title
+
+filetype plugin on
+filetype indent on
+
+set nocompatible
+set showcmd
+
+set so=7
+
+set wildmenu
+set wildmode=list:longest,full
+set mouse=a
+
+set number
+set ruler
+
+set hidden
+
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l,[,]
+
+set ignorecase
+set smartcase
+
+set hlsearch
+set incsearch
+set lazyredraw
+set magic
+set showmatch
+
+set autoindent
+set smartindent
+set nofoldenable
+set foldmethod=indent
+set wrap
+set expandtab
+set smarttab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set spl=en spell
+set nospell
+
+syntax enable
+colorscheme default
+
+set encoding=utf8
+
+set ffs=unix,dos,mac
+
+set laststatus=2
+
+set backup
