@@ -23,10 +23,10 @@ The following are done after basic manual installation or installer. Properly mo
 
 * Install necessary proprietary firmwares and drivers (especially for WiFi and GPU) so that one has a usable system on first boot. Set up network connection(s), e.g. by copying the contents of `/etc/NetworkManager/system-connections` to the new system.
 
-* Disable onboard audio (`echo 'blacklist snd_hda_intel' | sudo tee /etc/modprobe.d/disable-onboard-audio.conf`) if necessary. Also set up correct sampling rate for sound devices such as USB sound cards.
-
 * If using `grub-pc`, edit `/etc/default/grub` for a sane grub config. If using `refind` install it.
 
-* Install key packages such as `sudo`, `ssh` and `vim`.
+* Install key packages such as `sudo`, `ssh` and `vim`, as well as Windows compability utilities such as `ntfs-3g`.
 
 * Change the root user password and/or create a normal user.
+
+* Disable onboard audio (`echo 'blacklist snd_hda_intel' | sudo tee /etc/modprobe.d/disable-onboard-audio.conf`) if necessary. Also set up correct sampling rate for sound devices such as USB sound cards.
