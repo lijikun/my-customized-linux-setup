@@ -1,6 +1,6 @@
 Some notes and config files for setting up a linux desktop environment in my preferred way. Eventually it might be better to use  configuration management software such as Ansible instead.
 
-It gives more control if one uses the commands line with the likes of `debootstrap`, `pacstrap` or `rpm`, rather than a installer. 
+It gives more control if one uses the commands line with the likes of `debootstrap`, `pacstrap` or `rpm`/`yum`/`dnf`, rather than a installer. 
 
 General references: 
 * https://wiki.archlinux.org/index.php/Installation_guide
@@ -26,3 +26,7 @@ The following are done after basic manual installation or installer. Properly mo
 * Disable onboard audio (`echo 'blacklist snd_hda_intel' | sudo tee /etc/modprobe.d/disable-onboard-audio.conf`) if necessary. Also set up correct sampling rate for sound devices such as USB sound cards.
 
 * If using `grub-pc`, edit `/etc/default/grub` for a sane grub config. If using `refind` install it.
+
+* Install key packages such as `sudo`, `ssh` and `vim`.
+
+* Change the root user password and/or create a normal user.
