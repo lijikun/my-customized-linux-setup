@@ -5,6 +5,7 @@ It gives more control if one uses the commands line with the likes of `debootstr
 General references: 
 * https://wiki.archlinux.org/index.php/Installation_guide
 * https://www.debian.org/releases/stable/amd64/apds03.en.html
+* https://github.com/glacion/fedora-chroot-installation/blob/master/docs/VM-Install.md
 
 # Before the First Reboot
 
