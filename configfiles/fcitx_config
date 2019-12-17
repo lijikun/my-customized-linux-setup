@@ -1,3 +1,5 @@
+# Location: $HOME/.config/fcitx/config
+
 [Hotkey]
 # Trigger Input Method
 TriggerKey=SUPER_SPACE
