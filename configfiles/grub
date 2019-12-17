@@ -1,0 +1,10 @@
+# Location: /etc/default/grub
+
+GRUB_DEFAULT=saved
+GRUB_SAVEDEFAULT=true
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=2
+GRUB_DISTRIBUTOR=`lsb_release -d -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="nosplash"
+GRUB_CMDLINE_LINUX=""
+GRUB_TERMINAL=console
