@@ -1,4 +1,4 @@
-The KDE plsama desktop has a few bugs that make the use of [fcitx](fcitx-im.org) (or other input methods) difficult.
+The KDE plsama desktop has a few bugs that make the use of [fcitx](https://fcitx-im.org) (or other input methods) difficult.
 
 * `Meta+Space` defaults to the KRunner bar and cannot be removed, conflicting with input mehtod: See [this bug](https://bugs.kde.org/show_bug.cgi?id=413542). 
     
