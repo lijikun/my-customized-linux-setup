@@ -6,4 +6,4 @@ The KDE plsama desktop has a few bugs that make the use of fcitx (or other input
     
 * Plasma empties the `QT_IM_MODULE` variable on start: 
 
-    `echo 'export QT_IM_MODULE=fcitx > $HOME/.config/plasma-workspace/env/fcitx.sh`.
+    `echo 'export QT_IM_MODULE=fcitx' > $HOME/.config/plasma-workspace/env/fcitx.sh`.
