@@ -26,11 +26,11 @@ The following are done after basic manual installation or installer. Properly mo
 
 * Set up network connection(s), e.g. by copying the contents of `/etc/NetworkManager/system-connections` to the new system.
 
-* If using `grub-pc`, edit `/etc/default/grub` for a sane grub config. If using `refind` install it.
+* If using `grub-pc`, edit `/etc/default/grub` for a sane grub config. If using `refind`, install it to EFI system partition.
 
 * Install key packages such as `sudo`, `ssh` and `vim`, as well as Windows compability utilities such as `ntfs-3g`.
 
-* Change the root user password and/or create a normal user.
+* Change the root user password, and/or create a normal user with sudo privilege.
 
 * Install a desktop environment if necessary.
 
