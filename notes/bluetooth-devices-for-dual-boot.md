@@ -1,4 +1,4 @@
-If you wish to be able to use a bluetooth device, e.g. keyboard & mouse, in both OSes in your Windows/Linux dual boot system, you should first pair it in Linux, then pair it in Windows. 
+If you wish to be able to use a bluetooth device, e.g. keyboard & mouse, in both OSes of your Windows/Linux dual boot system, you should first pair it in Linux, and then pair it in Windows. 
 
 After that, extract the Bluetooth key from the Windows registry (e.g. with the `chntpw` tool under Linux), and edit the key in Linux bluetooth config files for this device, located under `/var/lib/bluetooth`.
 
