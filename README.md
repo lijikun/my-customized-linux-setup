@@ -1,15 +1,23 @@
-# Preamble
+# Notes on Installing a Highly Customized Linux Setup
 
-Some notes and config files for setting up a linux desktop environment in my preferred way. Eventually it might be better to use  configuration management software such as Ansible instead.
+## Preamble
 
-Installing into a chroot using tools like of `debootstrap`, `pacstrap` or `rpm`/`yum`/`dnf`, rather than a installer, gives the user more control and minimizes the installation. 
+This repo is just a collection of notes, links and config files for setting up a highly customized linux desktop environment in my preferred way. 
 
-General references: 
-* https://wiki.archlinux.org/index.php/Installation_guide
-* https://www.debian.org/releases/stable/amd64/apds03.en.html
-* https://github.com/glacion/fedora-chroot-installation/blob/master/docs/VM-Install.md
+The general idea is to forgo the official installers of various Linux distros because they: (i) often have graphical interfaces that run into driver issues on newer hardware, and (ii) limit user options, especially by limiting storage options and package choices. Instead, I prefer installing into a chroot using tools like of `debootstrap`, `pacstrap` or `rpm`/`yum`/`dnf`, i.e. installing every Linux distro the Arch/Gentoo way, while not really going into the trouble of building a LFS.
 
-# Before the First Reboot
+General insprations: 
+* Arch: https://wiki.archlinux.org/index.php/Installation_guide
+* Debian/Ubuntu: https://www.debian.org/releases/stable/amd64/apds03.en.html
+* Fedora: https://github.com/glacion/fedora-chroot-installation/blob/master/docs/VM-Install.md
+
+## Not-So-Easy Tips and Tricks
+
+[Setting up LUKS encryption including `/boot` on Debian/Ubuntu/Mint](https://cryptsetup-team.pages.debian.net/cryptsetup/encrypted-boot.html)
+
+[Automatic Signing of DKMS-Generated Kernel Modules for Secure Boot (Nvidia Driver in CentOS 8 as Example)](https://gist.github.com/lijikun/22be09ec9b178e745758a29c7a147cc9)
+
+## Before the First Reboot
 
 The following are done after the minimal install. Properly mount/create the `dev`, `proc` and `sys` folders and chroot into the new installation, e.g. `LANG=en_US.UTF-8 chroot /mnt/target /bin/bash`:
 
@@ -38,7 +46,7 @@ The following are done after the minimal install. Properly mount/create the `dev
 
 * Disable onboard audio (`echo 'blacklist snd_hda_intel' | sudo tee /etc/modprobe.d/disable-onboard-audio.conf`) if necessary. Also set up correct sampling rate for sound devices such as USB sound cards.
 
-# After the First Boot
+## After the First Boot
 
 * Put [customized config files](https://github.com/lijikun/my-linux-setup/tree/master/configfiles) like `.vimrc` or `.bashrc` into their respective places.
 
