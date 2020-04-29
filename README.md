@@ -58,10 +58,9 @@ Properly mount/create the `dev`, `proc` and `sys` folders and chroot into the ne
 
 * Set up network connection(s), e.g. by copying the contents of `/etc/NetworkManager/system-connections` to the new system.
 
-* Install important packages such as `ssh` and `vim`, as well as Windows compability utilities such as `ntfs-3g`.
+* Install essential tools such as `ssh`, `vim` and `tmux` in case you need to troubleshoot, as well as Windows compability utilities such as `ntfs-3g` if you dual boot.
 
 * Install a desktop environment if necessary.
-
 
 ## Stuff that Can Be Done After the First Boot
 
