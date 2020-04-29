@@ -4,7 +4,7 @@
 
 This repo is just a collection of notes, links and config files for setting up a highly customized linux desktop environment in my preferred way. 
 
-The general idea is to forgo the official installers of various Linux distros because they: (i) often have graphical interfaces that run into driver issues on newer hardware, and (ii) limit user options, especially by limiting storage options and package choices. Instead, I prefer installing into a chroot using tools like of `debootstrap`, `pacstrap` or `rpm`/`dnf`, i.e. installing every Linux distro the Arch/Gentoo way, while not really going into the trouble of building a LFS.
+The general idea is to **forgo the official installers** of most Linux distros because they: (i) often have graphical interfaces that run into driver issues on newer hardware, and (ii) limit user options, especially on storage and package choice. Instead, I prefer installing into a **chroot** using tools like of `debootstrap`, `pacstrap` or `rpm`/`dnf`, i.e. installing every Linux distro the Arch/Gentoo way, while not really going into the trouble of building a LFS.
 
 General insprations: 
 * Arch: https://wiki.archlinux.org/index.php/Installation_guide
