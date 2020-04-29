@@ -42,11 +42,13 @@ Properly mount/create the `dev`, `proc` and `sys` folders and chroot into the ne
 
 * Install a kernel.
 
-* Install and configure the boot loader. If using `grub-pc`, edit `/etc/default/grub` for a sane grub config. If using `refind` or `efibootmgr`, install it to EFI system partition.
+* Install and configure the boot loader. If using `grub-pc`, edit `/etc/default/grub` for a sane grub config. If using `grub-efi`, `refind`, `systemd-boot`, etc., install it to EFI system partition.
 
-* Edit `/etc/locale.gen` as necessary. Set up locales with `locale-gen`, `localectl`, or `dpkg-reconfigure locales`. 
+* Set up locales with `locale-gen`, `localectl`, or `dpkg-reconfigure locales`. 
 
-* Set the hardware clock to UTC with `hwclock`. Configure the time zone by linking `/etc/localtime`, `timedatectl` or `dpkg-reconfigure tzdata`.
+* Set the hardware clock to UTC with `hwclock`. There's a trick to [make Windows use UTC hardware clock](https://wiki.archlinux.org/index.php/System_time#UTC_in_Windows) if you dual boot.
+
+    Configure the time zone by linking `/etc/localtime`, `timedatectl` or `dpkg-reconfigure tzdata`.
 
 * Set the hostname.
 
