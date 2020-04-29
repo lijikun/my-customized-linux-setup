@@ -23,7 +23,7 @@ General insprations:
 
 * Connect to the Internet.
 
-* Partition the storage devices on which the OS is to be installed with e.g. `parted` or `cgdisk`. Create filesystems with `mkfs`.
+* Partition the storage devices on which the OS is to be installed with e.g. `parted` or `cgdisk`. Set up LVM, LUKS, RAID, etc now. Then format the partitions or logical volumes with `mkfs`.
 
 * Mount the root partition. Create mountpoints for other partitions (e.g. `/boot`, `/boot/efi`, `/home`) and mount them if needed.
 
