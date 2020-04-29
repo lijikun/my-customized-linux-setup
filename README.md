@@ -62,7 +62,7 @@ Properly mount/create the `dev`, `proc` and `sys` folders and chroot into the ne
 
 * Install a desktop environment if necessary.
 
-## Stuff that Can Be Done After the First Boot
+## Stuff That Can Be Done After the First Boot
 
 * Disable onboard audio (`echo 'blacklist snd_hda_intel' | sudo tee /etc/modprobe.d/disable-onboard-audio.conf`) if necessary. Also set up correct sampling rate for sound devices such as USB sound cards.
 
