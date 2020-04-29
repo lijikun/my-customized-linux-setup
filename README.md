@@ -29,7 +29,7 @@ General insprations:
 
 * Use `pacstrap`, `debootstrap`, `rpm`/`dnf`, etc to install the base system onto the mountpoint of the new root.
 
-## Things That Should Be Done Before the First Reboot
+## Things That Should Be Done Before the First Boot
 
 The basic chroot environment isn't bootable. The following must be done done after the minimal install. 
 
