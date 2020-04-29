@@ -13,7 +13,7 @@ General insprations:
 
 ## Not-So-Easy Tips and Tricks
 
-[Setting up LUKS encryption including `/boot` on Debian/Ubuntu/Mint](https://cryptsetup-team.pages.debian.net/cryptsetup/encrypted-boot.html)
+[Setting Up LUKS Encryption Including `/boot` on Debian/Ubuntu/Mint](https://cryptsetup-team.pages.debian.net/cryptsetup/encrypted-boot.html)
 
 [Automatic Signing of DKMS-Generated Kernel Modules for Secure Boot (Nvidia Driver in CentOS 8 as Example)](https://gist.github.com/lijikun/22be09ec9b178e745758a29c7a147cc9)
 
