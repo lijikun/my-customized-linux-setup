@@ -6,7 +6,7 @@ This repo is just a collection of notes, links and config files for setting up a
 
 The general idea is to **forgo the official installers** of most Linux distros because they: (i) often have graphical interfaces that run into driver issues on newer hardware, and (ii) limit user options, especially on storage and package choice. Instead, I prefer installing into a **chroot** using tools like of `debootstrap`, `pacstrap` or `rpm`/`dnf`, i.e. installing every Linux distro the Arch/Gentoo way, while not really going into the trouble of building a LFS.
 
-General insprations: 
+## General Guides That Inspired This Repo
 * Arch: https://wiki.archlinux.org/index.php/Installation_guide
 * Debian/Ubuntu: https://www.debian.org/releases/stable/amd64/apds03.en.html
 * Fedora: https://github.com/glacion/fedora-chroot-installation/blob/master/docs/VM-Install.md
