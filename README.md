@@ -21,13 +21,19 @@ General insprations:
 
 * Boot with a live CD/USB. All Debian-based distros can be installed from any Debian-based live environments. For Fedora/Centos, choose "Troubleshooting" and "Rescue" options at boot to get into a "live" command-line interface.
 
-* Connect to the Internet.
+* Partition the storage devices on which the OS is to be installed with e.g. `parted` or `cgdisk`. 
 
-* Partition the storage devices on which the OS is to be installed with e.g. `parted` or `cgdisk`. Set up LVM, LUKS, RAID, etc now. Then format the partitions or logical volumes with `mkfs`.
+* Set up LVM, LUKS, RAID, etc now. Then format the partitions or logical volumes with `mkfs`.
 
 * Mount the root partition. Create mountpoints for other partitions (e.g. `/boot`, `/boot/efi`, `/home`) and mount them if needed.
 
+* Connect to the Internet. Using `NetworkManager` is recommended.
+
+* Locate the needed online repo of your distro. You may need to download/create config files onto the new filesystems before installing amything.
+
 * Use `pacstrap`, `debootstrap`, `rpm`/`dnf`, etc to install the base system onto the mountpoint of the new root.
+
+* Copy `/etc/resolv.conf` to the chroot.
 
 ## Things That Should Be Done Before the First Boot
 
@@ -42,7 +48,9 @@ Properly mount/create the `dev`, `proc` and `sys` folders and chroot into the ne
 
 * Install a kernel.
 
-* Install and configure the boot loader. If using `grub-pc`, edit `/etc/default/grub` for a sane grub config. If using `grub-efi`, `refind`, `systemd-boot`, etc., install it to EFI system partition.
+* Configure and generate an initramfs.
+
+* Install and configure a boot loader. `grub-pc` for MBR; `grub-efi`, `refind`, `systemd-boot`, etc., for EFI. Create or edit `/etc/default/grub` for a sane grub config.
 
 * Set up locales with `locale-gen`, `localectl`, or `dpkg-reconfigure locales`. 
 
@@ -52,17 +60,21 @@ Properly mount/create the `dev`, `proc` and `sys` folders and chroot into the ne
 
 * Set the hostname.
 
-* Change the root user password (or leave it empty to disable direct root login). Install `sudo` and create a normal user with sudo privilege. Also set default options for users. Put any necessary config files into `/etc/skel`, and edit `/etc/default/useradd`.
-
-* Install necessary proprietary firmwares and drivers (especially for WiFi and GPU) so that one has a usable system on first boot. 
+* Create the root password, or leave it empty to disable root login. In the latter case you must install `sudo` and create a normal user with sudo privilege. 
 
 * Set up network connection(s), e.g. by copying the contents of `/etc/NetworkManager/system-connections` to the new system.
 
 * Install essential tools such as `ssh`, `vim` and `tmux` in case you need to troubleshoot, as well as Windows compability utilities such as `ntfs-3g` if you dual boot.
 
+* Install necessary proprietary firmwares and drivers (especially for WiFi and GPU) so that one has a usable system on first boot.
+
 * Install a desktop environment if necessary.
 
+* When in doubt, re-generate the initramfs and boot loader config before exiting the chroot and reboot.
+
 ## Stuff That Can Be Done After the First Boot
+
+* Also set default options for users. Put any necessary config files into `/etc/skel`, and edit `/etc/default/useradd`.
 
 * Disable onboard audio (`echo 'blacklist snd_hda_intel' | sudo tee /etc/modprobe.d/disable-onboard-audio.conf`) if necessary. Also set up correct sampling rate for sound devices such as USB sound cards.
 
